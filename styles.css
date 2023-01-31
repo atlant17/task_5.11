@@ -1,0 +1,93 @@
+/*Выравниваем и добовляем фото на задний фон*/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    background: url(./img/paper.jpg) bottom no-repeat;
+    background-size: cover;
+}
+/*Убираем отступы*/
+body {
+    margin: 0;
+    padding: 0;
+}
+/*Стиль для первого заголовка*/
+h1 {
+    color: rgba(1, 28, 16, 0.823);
+    font-size: 4rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+/*Стили для футера*/
+footer {
+    padding-top: 20px; padding-bottom: 60px;
+    text-align: center; 
+}
+footer .links {
+    margin-bottom: 50px;
+}
+footer .links > a {
+    color: gray;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.copyright {
+    color: gray;
+    font-family: 'Times New Roman', Times, serif;
+}
+.news {
+    background-color: white;
+    padding: 50px 0 32px;
+}
+article {
+    width: 770px;
+    margin: 0 auto 32px;
+    padding: 6px 15px;
+    border-bottom: none;
+}
+article a {
+    color: rgb(2, 17, 5);
+    text-decoration: none;
+}
+article a:hover {
+    color: rgba(0, 0, 0, 0.645);
+}
+article img {
+    width: 700px;
+}
+/* навигационный бар */
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* фикс позиция */
+    top: 0; /* Позиция на верху страницы */
+    width: 100%; /* Во свю ширину */
+}
+/* ссылки в нав баре */
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/* Выделение при нажатии */
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+/*Выделение четных заголовков*/
+.article-meta:nth-child(odd) {
+    background: rgba(226, 121, 16, 0.341);
+}
+/*Добавление псевдо-класса New*/
+.title::before {
+    content: "New!";
+    font-size: 21px;
+    color: red;
+}
